@@ -8,14 +8,14 @@ export default function TeamForm(props) {
         const value = evt.target.value;
         update(name, value);
     }
-
+    console.log(values.name);
     const onSubmit = evt => {
         evt.preventDefault();
         submit();
     }
 
     return (
-        <form className='form-container' onSubmit={submit}>
+        <form className='form-container' onSubmit={onSubmit}>
             <div className='form-inputs'>
                 <label>Name
                     <input
@@ -36,7 +36,10 @@ export default function TeamForm(props) {
                     />
                 </label>
                 <label>Role 
-                    <select value={values.role} name='role' onChange={onChange}>
+                    <select 
+                    value={values.role} 
+                    name='role' 
+                    onChange={onChange}>
                         <option value=''>---Select a Role</option>
                         <option value='intern'>Intern</option>
                         <option value='backend'>Backend Engineer</option>
