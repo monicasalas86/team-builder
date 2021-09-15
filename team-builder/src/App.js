@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import Form from './components/Form';
 
+
 const initalFormValues = {
   name: '',
   email: '',
@@ -43,7 +44,7 @@ function App() {
               <h3>{person.name}</h3>
               <h3>{person.email}</h3>
               <h3>{person.role}</h3>
-            </div>
+            </div>            
           )
         })}
       </section>
